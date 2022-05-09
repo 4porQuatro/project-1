@@ -35,7 +35,7 @@ Route::post('register', function(){
 });
 
 require('api.php');
-require('cms.php');
+//require('cms.php');
 require('tests.php');
 require('front.php');
 
