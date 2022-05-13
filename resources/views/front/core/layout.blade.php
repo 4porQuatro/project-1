@@ -10,6 +10,11 @@
 <div id="app">
     @if(!empty($layout) && !empty($layout->header))
         @include($layout->header->component->path, ['data'=>$layout->header->getFrontData(), 'terms'=>$layout->header->getFrontTerms()])
+
+        @if(request()->segment(1) == 'with-component-path')
+            {{$layout->header->component->path}}
+        @endif
+
     @endif
 
     @foreach($sections as $section)
@@ -18,16 +23,28 @@
         @else
             @include($section->component->path, ['data'=>$section->getFrontData(), 'terms'=>$section->getFrontTerms()])
         @endif
+
+            @if(request()->segment(1) == 'with-component-path')
+                {{$section->component->path}}
+            @endif
     @endforeach
 
     @if(!empty($layout))
         @foreach($layout->sections as $section)
             @include($section->component->path, ['data'=>$section->getFrontData(), 'terms'=>$section->getFrontTerms()])
+
+                @if(request()->segment(1) == 'with-component-path')
+                    {{$section->component->path}}
+                @endif
         @endforeach
     @endif
 
     @if(!empty($layout) && !empty($layout->footer))
         @include($layout->footer->component->path, ['data'=>$layout->footer->getFrontData(), 'terms'=>$layout->footer->getFrontTerms()])
+
+            @if(request()->segment(1) == 'with-component-path')
+                {{$layout->footer->component->path}}
+            @endif
     @endif
 </div>
 </body>
