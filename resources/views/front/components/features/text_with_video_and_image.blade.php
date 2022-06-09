@@ -16,12 +16,12 @@
             </div>
             <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
                 @if(!empty($data->image->default) && isset($data->image->default[0]))
-                    <img class="relative mx-auto" width="490"
+                    <img class="relative mx-auto w-100 h-100" width="100%"
                          src="{{$data->image->default[0]['path']}}"
                          alt="{{$data->image->default[0]['alt_text']}}"
                     >
                 @endif
-                    <iframe src="{{$data->vimeo->default}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe class="w-100 mt-1" src="{{$data->vimeo->default}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
 
