@@ -1,4 +1,3 @@
-
 <div class="main home-page">
   <section id="scroll_2" class="count-box">
     <div class="row mx-0 background-box">
@@ -13,21 +12,28 @@
             <div class="row">
               @foreach($data->articles->default as $article)
               <div class="mycard col-lg-6 pe-1 @if($loop->index % 2 == 0) mb-5 pb-2 @else mt-5 pt-2 @endif ">
-                <div class="card mx-auto flex-row-reverse rounded-0" outlined>
-                  <div class="card-img-right w-25 d-inline-flex justify-content-end" color="transparent">
-                    <img src="/storage/{{$article->images[0]['path']}}" style='width: 80%;'>
-                    <!--                            <span class="yellow-text mdi mdi-account-multiple-outline" x-large></span>-->
-                  </div>
-                  <div class="card-body">
-                    <div class="card-content">
-                      <div class="card-title yellow-text h1 mb-1">
-                      {{$article->subtitle}}
-                      </div>
-                      <div class="h5 card-subtitle">
-                      {{$article->title}}
+                <div class="card mx-auto rounded-0" outlined>
+                  <div class="d-flex flex-row-reverse">
+                    <div class="card-img-right w-25 d-inline-flex justify-content-end" color="transparent">
+                      <img src="/storage/{{$article->images[0]['path']}}" style='width: 60px; height: 60px'>
+                      <!--                            <span class="yellow-text mdi mdi-account-multiple-outline" x-large></span>-->
+                    </div>
+                    <div class="card-body">
+                      <div class="card-content">
+                        <div class="card-title yellow-text">
+                          {{$article->subtitle}}
+                        </div>
                       </div>
                     </div>
                   </div>
+                  
+                  <div class="card-body">
+                      <div class="card-content">
+                        <div class="h5 card-subtitle">
+                          {{$article->title}}
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
               @endforeach

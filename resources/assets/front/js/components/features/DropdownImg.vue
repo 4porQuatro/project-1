@@ -5,8 +5,8 @@
             class="dropdownImg"
             style="margin: 0px 220px; padding-top: 100px"
         >
-            <div class="row">
-                <div class="col-lg-6 mb-lg-16 mb-lg-5 pb-lg-5 pe-lg-0">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 mb-lg-16 mb-lg-5 pb-lg-5 pe-lg-0">
                     <div class="accordion secondary-bg" id="accordionExample">
                         <div
                             class="accordion-item bg-transparent text-white"
@@ -14,11 +14,12 @@
                             :key="faq.id"
                         >
                             <h2
-                                class="accordion-header"
+                                class="accordion-header py-10"
+                                :class="faqIndex != 0?'border-top':''"
                                 :id="'heading' + faq.id"
                             >
-                                <button
-                                    class="accordion-button bg-transparent text-white"
+                                <div
+                                    class="accordion-button text-uppercase bg-transparent text-white hover:shadow-0"
                                     :class="faqIndex != 0 ? 'collapsed' : ''"
                                     type="button"
                                     data-bs-toggle="collapse"
@@ -27,7 +28,7 @@
                                     aria-controls="collapseOne"
                                 >
                                     {{ faq.title }}
-                                </button>
+                                </div>
                             </h2>
                             <div
                                 :id="'collapse' + faq.id"
@@ -58,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-lg-16 pt-lg-5 mt-lg-5 ps-lg-0">
+                <div class="col-lg-5 mt-lg-16 pt-lg-5 mt-lg-5 ps-lg-0">
                     <img class="h-100 w-100" src="/storage/files/2.jpg" />
                     <!-- <img
                     width="100%"

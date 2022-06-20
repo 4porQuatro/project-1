@@ -1,22 +1,58 @@
 <div>
     <div>
-       @foreach($result->images_detail as $img)
-           <img src="/storage/{{$img['path']}}">
-       @endforeach
-    </div>
-        @if(!empty($result->published_date))
-            <span class="absolute inset-0"></span>
-            {{\Carbon\Carbon::createFromFormat('Y-m-d',$result->published_date)->format('d.m.Y')}}
-        @endif
-    <div>
-        <h1>{{$result->title}}</h1>
-    </div>
-    @if(!empty($result))
-        <div>
-            {!! $result->small_body !!}
+        <h1 class="page-heading text-uppercase">{{$result->title}}</h1>
+
+        <div class="container">
+            @if(!empty($result))
+            <div class="h4">
+                {!! $result->small_body !!}
+            </div>
+            @endif
+            {!! $result->body !!}
+            <p class="yellow-text mt-3">
+                @if(!empty($result->published_date))
+                <span class="absolute inset-0"></span>
+                {{\Carbon\Carbon::createFromFormat('Y-m-d',$result->published_date)->format('d.m.Y')}}
+                @endif
+            </p>
         </div>
-    @endif
-    <div>
-        {!! $result->body !!}
     </div>
+    <!-- SLIDER IMAGES -->
+    @if(!empty($result->images_detail))
+    <div class="container-fluid mt-10">
+        <div class="row">
+            <div class="col-lg">
+                <div class="owl-carousel x-images list_images_with_title">
+                    @foreach($result->images_detail as $image)
+                    <img class="object-cover mr-2" src="/storage/{{$image['path']}}" alt="/storage/{{$image['alt_text']}}">
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel.x-images").owlCarousel({
+                stagePadding: 80,
+                loop: false,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: true
+                    },
+                    1000: {
+                        items: 2,
+                        nav: true
+                    }
+                }
+            });
+        });
+    </script>
+    @endif
 </div>

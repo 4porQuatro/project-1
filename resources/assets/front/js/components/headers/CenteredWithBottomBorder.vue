@@ -8,7 +8,7 @@
                             <PopoverGroup as="nav" class="navigation d-flex">
                                 <Popover v-slot="{ open }">
                                     <PopoverButton
-                                        class="nav-item me-2 d-inline-flex align-items-center"
+                                        class="nav-item me-4 d-inline-flex align-items-center"
                                     >
                                         <span
                                             v-text="
@@ -32,8 +32,10 @@
                                             <div
                                                 class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-1"
                                             >
-                                                <nav class="row">
-                                                    <div class="col-lg">
+                                                <nav
+                                                    class="grid gap-y-10 px-4 py-8 sm:grid-cols-7 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
+                                                >
+                                                    <div>
                                                         <h3
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -70,7 +72,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-lg">
+                                                    <div>
                                                         <h3
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -107,7 +109,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-lg">
+                                                    <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -117,7 +119,7 @@
                                                             "
                                                         ></a>
                                                     </div>
-                                                    <div class="col-lg">
+                                                    <div>
                                                         <h3
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -127,7 +129,7 @@
                                                             "
                                                         ></h3>
                                                     </div>
-                                                    <div class="col-lg">
+                                                    <div>
                                                         <h3
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -137,7 +139,7 @@
                                                             "
                                                         ></h3>
                                                     </div>
-                                                    <div class="col-lg">
+                                                    <div>
                                                         <h3
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -147,7 +149,7 @@
                                                             "
                                                         ></h3>
                                                     </div>
-                                                    <div class="col-lg">
+                                                    <div>
                                                         <h3
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
                                                             v-text="
@@ -198,7 +200,7 @@
                                 </Popover>
                                 <Popover v-slot="{ open }">
                                     <PopoverButton
-                                        class="nav-item me-2 d-inline-flex align-items-center"
+                                        class="nav-item me-4 d-inline-flex align-items-center"
                                     >
                                         <span
                                             v-text="
@@ -389,7 +391,7 @@
                                 </Popover>
                                 <a
                                     :href="main_data.link_3.default"
-                                    class="nav-item me-2"
+                                    class="nav-item me-4"
                                     v-text="main_data.text_3_menu.default"
                                 >
                                 </a>
@@ -407,7 +409,7 @@
                                 class="py-2"
                                 :src="logo"
                                 :alt="logo"
-                                style="width: 80px"
+                                style="width: 100px"
                             />
                         </a>
                     </div>
@@ -419,13 +421,13 @@
                             >
                                 <a
                                     :href="main_data.link_5.default"
-                                    class="nav-item ms-2 d-lg-block d-sm-none d-none"
+                                    class="nav-item ms-4 d-lg-block d-sm-none d-none"
                                     v-text="main_data.text_5_menu.default"
                                 >
                                 </a>
                                 <a
                                     :href="main_data.link_6.default"
-                                    class="nav-item ms-2 d-lg-block d-sm-none d-none"
+                                    class="nav-item ms-4 d-lg-block d-sm-none d-none"
                                     v-text="main_data.text_6_menu.default"
                                 ></a>
                                 <Popover
@@ -433,7 +435,7 @@
                                     v-slot="{ open }"
                                 >
                                     <PopoverButton
-                                        class="nav-item ms-2 d-inline-flex align-items-center"
+                                        class="nav-item ms-4 d-inline-flex align-items-center"
                                     >
                                         <span
                                             v-text="
@@ -623,7 +625,7 @@
                                     </transition>
                                 </Popover>
 
-                                <div class="nav-item d-flex ms-2">
+                                <div class="nav-item d-flex ms-4">
                                     <a @click="isOpen = !isOpen"
                                         ><svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -697,7 +699,7 @@
                                     </Dialog>
                                 </div>
 
-                                <div class="nav-item ms-2 ms-sm-3">
+                                <div class="nav-item ms-4 ms-sm-3">
                                     <ul>
                                         <li
                                             v-for="(locale, key) in this
@@ -722,7 +724,7 @@
                                         <span
                                             class="material-icons-outlined text-4xl ms-sm-2"
                                         >
-                                                menu_open
+                                            menu_open
                                         </span>
                                     </PopoverButton>
 

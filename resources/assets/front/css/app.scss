@@ -9,8 +9,16 @@ img {
     object-fit: cover;
 }
 
-.owl-carousel{
-    .owl-nav{
+.splitImage {
+    margin-bottom: 130px;
+}
+
+.policy-text {
+    padding: 0 220px;
+}
+
+.owl-carousel {
+    .owl-nav {
         position: absolute;
         top: 50%;
         left: 0;
@@ -18,7 +26,7 @@ img {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        span{
+        span {
             padding: 10px;
             font-size: 40px;
             font-weight: 700;
@@ -27,9 +35,9 @@ img {
     }
 }
 
-.patrimonio{
-    .card{
-        .card-body{
+.patrimonio {
+    .card {
+        .card-body {
             position: absolute;
             left: 0;
             top: 0;
@@ -42,14 +50,16 @@ img {
         }
     }
 }
-.population{
-    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active,.nav-tabs .nav-link:hover {
+.population {
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-link:hover {
         background-color: transparent;
         border-color: transparent;
         border-bottom: 2px solid #495057;
         font-weight: 700;
     }
-    .nav-tabs .nav-link{
+    .nav-tabs .nav-link {
         color: #495057;
     }
 }
@@ -173,6 +183,7 @@ img {
 .page-heading {
     text-align: center;
     font-size: 150px;
+    line-height: 150px;
     -webkit-text-stroke: 1px #ffd981;
     color: white !important;
     text-shadow: 1px 1px 0 #ffd981, -1px -1px 0 #ffd981, 1px -1px 0 #ffd981,
@@ -186,6 +197,66 @@ $px-app: 80px;
 
 $accordion-icon-color: #fff;
 $accordion-icon-active-color: $app-yellow;
+
+.header {
+    nav {
+        a:hover {
+            span {
+                color: $app-yellow !important;
+            }
+        }
+    }
+}
+.faq.main {
+    .accordion {
+        .accordion-item {
+            border: 0;
+            margin-bottom: 10px;
+            .accordion-header {
+                .accordion-button {
+                    border: none !important;
+                    box-shadow: none;
+                    background-color: #000a3307 !important;
+                    color: black !important;
+                }
+                .accordion-button.collapsed {
+                    border: none !important;
+                    color: black !important;
+                }
+            }
+        }
+    }
+}
+.mycard {
+    .card-img-right + .card-body {
+        padding-bottom: 0px !important;
+        .card-content {
+            .card-title {
+                position: relative;
+                padding-left: 20px;
+                font-size: 80px;
+                line-height: 80px;
+                margin-bottom: 0px;
+            }
+            .card-title::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background-color: $app-yellow;
+            }
+        }
+    }
+    .card-body {
+        .card-content {
+            .h5 {
+                padding-left: 20px;
+            }
+        }
+    }
+}
 
 *::-webkit-scrollbar {
     width: 10px;
@@ -407,9 +478,6 @@ body {
         .card {
             .card-body {
                 padding: 0.75rem;
-                .card-title {
-                    margin-bottom: 0.75rem !important;
-                }
             }
             .card-img-right {
                 padding: 0.75rem;
@@ -511,6 +579,7 @@ body {
 }
 
 footer {
+    margin-top: 100px;
     .footer-links {
         a.heading {
             color: $app-yellow;
@@ -569,6 +638,9 @@ footer {
 // r-small
 
 @media (max-width: 576px) {
+    .policy-text {
+        padding: 0 7.33vw;
+    }
     .time-line {
         /* Full-width containers */
         .timeline-container {

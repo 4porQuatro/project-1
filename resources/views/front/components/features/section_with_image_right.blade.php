@@ -1,4 +1,4 @@
-<div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+<!-- <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div class="relative">
@@ -29,4 +29,37 @@
         </div>
 
     </div>
+</div> -->
+
+
+@if(!empty($data->body->default))
+<div class="mensagem main">
+    <section class="sobre">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 left-box overflow-hidden">
+                    <h3 class="page-heading">{{$data->title->default}}</h3>
+                    <div class="wrap pe-5 py-5 h-100 d-flex flex-wrap">
+                        @if(!empty($data->subtitle->default))
+                        <p class="mt-3 text-lg text-gray-500">{{$data->subtitle->default}}</p>
+                        @endif
+                        <span>
+                            @if(!empty($data->body->default))
+                            <p class="h6">
+                                {!! $data->body->default !!}
+                            </p>
+                            @endif
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-5 py-0 ps-lg-0 slider-with-right-img overflow-hidden">
+                    @if(!empty($data->image->default) && isset($data->image->default[0]))
+                    <img class="w-100" src="{{$data->image->default[0]['path']}}" alt="{{$data->image->default[0]['alt_text']}}" />
+                    @endif
+                </div>
+                <div class="col secondary-bg"></div>
+            </div>
+        </div>
+    </section>
 </div>
+@endif

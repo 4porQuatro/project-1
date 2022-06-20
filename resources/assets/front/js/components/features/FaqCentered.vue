@@ -1,29 +1,62 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <div class="bg-gray-50">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-                <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl" v-text="title"></h2>
-                <dl class="mt-6 space-y-6 divide-y divide-gray-200">
-                    <Disclosure as="div"  v-for="faq in faqs" :key="faq.id" class="pt-6" v-slot="{ open }">
-                        <dt class="text-lg">
-                            <DisclosureButton class="text-left w-full flex justify-between items-start text-gray-400">
-                <span class="font-medium text-gray-900">
-                  {{ faq.title }}
-                </span>
-                                <span class="ml-6 h-7 flex items-center">
-                  <ChevronDownIcon :class="[open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform']" aria-hidden="true" />
-                </span>
-                            </DisclosureButton>
-                        </dt>
-                        <DisclosurePanel as="dd" class="mt-2 pr-12">
-                            <div class="text-base text-gray-500" v-html="faq.small_body">
+    <div class="main home-page faq">
+        <section
+            class="dropdownImg"
+            style="margin: 0px 220px; padding-top: 100px"
+        >
+        <p class="page-heading" v-text="title"></p>
+            <div class="row justify-content-center">
+                <div class="col mb-lg-16 mb-lg-5 pb-lg-5 pe-lg-0">
+                    <div class="accordion" id="accordionExample">
+                        <div
+                            class="accordion-item bg-transparent text-black"
+                            v-for="(faq, faqIndex) in faqs"
+                            :key="faq.id"
+                        >
+                            <h2
+                                class="accordion-header bg-transparent"
+                                :id="'heading' + faq.id"
+                            >
+                                <div
+                                    class="accordion-button text-uppercase bg-transparent text-black hover:shadow-0"
+                                    :class="faqIndex != 0 ? 'collapsed' : ''"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    :data-bs-target="'#collapse' + faq.id"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                >
+                                    {{ faq.title }}
+                                </div>
+                            </h2>
+                            <div
+                                :id="'collapse' + faq.id"
+                                class="accordion-collapse collapse"
+                                :class="faqIndex == 0 ? 'show' : ''"
+                                aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    <p v-html="faq.small_body"></p>
+                                    <div>
+                                        <a :href="faq.link">
+                                        <span
+                                            v-if="faq.link_text"
+                                            class="saber-btn"
+                                            style="color: #fff"
+                                        >
+                                            <span v-html="faq.link_text"></span>
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </DisclosurePanel>
-                    </Disclosure>
-                </dl>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 

@@ -4,10 +4,10 @@
             <div class="pe-lg-5 me-lg-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="268" viewBox="0 0 660 268">
                     <text id="Sobre_nós" data-name="Sobre nós" transform="translate(1 1)" fill="none" stroke="#ffb100" stroke-width="1" font-size="200" font-family="SegoeUIBlack, Segoe UI">
-                        <tspan x="0" y="216">{{$data->title->default}}</tspan>
+                        <tspan class="text-uppercase" x="0" y="216">{{$data->title->default}}</tspan>
                     </text>
                     <text id="Sobre_nós-2" data-name="Sobre nós" transform="translate(229 146)" fill="#000a33" font-size="80" font-family="SegoeUIBlack, Segoe UI">
-                        <tspan x="0" y="86">{{$data->title->default}}</tspan>
+                        <tspan class="text-uppercase" x="0" y="86">{{$data->title->default}}</tspan>
                     </text>
                 </svg>
             </div>
@@ -22,14 +22,14 @@
                                     @foreach($sliderChunk as $article)
                                     <div class="col-lg-3">
                                         <div class="card border-0 has-shadow">
-                                            <div class="card-body" three-line>
+                                            <div class="card-body px-10 py-12" three-line>
                                                 <div class="card-content">
                                                     @if(!empty($article->start_date))
-                                                    <div class="card-title h5 mb-2 yellow-text pe-10">
+                                                    <div class="card-title h1 mb-2 yellow-text pe-10">
                                                         {{\Carbon\Carbon::createFromFormat('Y-m-d',$article->start_date)->format('d.m.Y')}}
                                                     </div>
                                                     @endif
-                                                    <div class="card-subtitle h6 mb-2 pe-4">
+                                                    <div class="card-subtitle h3 mb-2 pe-4">
                                                         {{$article->title}}
                                                     </div>
                                                     <div>

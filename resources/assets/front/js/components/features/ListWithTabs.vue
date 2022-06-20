@@ -4,7 +4,6 @@
         <p class="page-heading">
             {{title}}
         </p>
-        <!-- <img class="mx-auto" src="/storage/files/headings/{{$data->title->default}}.svg" alt="/storage/files/headings/{{$data->title->default}}.svg" style='height:16vh;max-width: 100%;object-fit: contain;'> -->
     </div>
     <div
         class="relative document-box border-b border-gray-200 sm:pb-0"
@@ -55,12 +54,12 @@
         </div>
         <div class="mt-4">
             <ul class="px-3">
-                <li class="border-bottom" v-for="(item,index) in this.list" :key="index">
+                <li class="border-bottom py-2 text-capitalize" v-for="(item,index) in this.list" :key="index">
                     <a
                         v-if="asDocs(item)"
                         :href="item.docs[0]['path']"
                         target="_blank"
-                        class="d-flex align-items-center"
+                        class="d-flex align-items-center justify-content-between"
                     >
                         {{ item.title }} <span class="material-icons-outlined me-2 yellow-text">download</span></a
                     >
