@@ -112,6 +112,7 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_3.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -120,34 +121,37 @@
                                                         ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_4.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_5.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_6.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
                                                         <h3
@@ -303,6 +307,7 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_3.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -311,34 +316,37 @@
                                                         ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_4.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_5.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_6.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
                                                         <h3
@@ -538,6 +546,7 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_3.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -546,34 +555,37 @@
                                                         ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_4.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_5.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_6.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div>
                                                         <h3
@@ -845,6 +857,7 @@
                                                     >
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_3.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -855,38 +868,41 @@
                                                     <div
                                                         class="col-lg p-sm-5 mt-4"
                                                     >
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_4.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div
                                                         class="col-lg p-sm-5 mt-4"
                                                     >
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_5.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div
                                                         class="col-lg p-sm-5 mt-4"
                                                     >
-                                                        <h3
+                                                        <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
+                                                            :href="main_data.link_6.default"
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
                                                                     .default
                                                             "
-                                                        ></h3>
+                                                        ></a>
                                                     </div>
                                                     <div
                                                         class="col-lg p-sm-5 mt-4"

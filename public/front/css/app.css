@@ -567,11 +567,17 @@ select{
 .bottom-0{
   bottom: 0px;
 }
-.top-full{
-  top: 100%;
-}
 .left-0{
   left: 0px;
+}
+.right-0{
+  right: 0px;
+}
+.top-0{
+  top: 0px;
+}
+.top-full{
+  top: 100%;
 }
 .right-full{
   right: 100%;
@@ -579,14 +585,14 @@ select{
 .top-1\/2{
   top: 50%;
 }
-.top-0{
-  top: 0px;
-}
 .z-50{
   z-index: 50;
 }
 .z-10{
   z-index: 10;
+}
+.z-40{
+  z-index: 40;
 }
 .z-30{
   z-index: 30;
@@ -654,6 +660,9 @@ select{
 .mb-3{
   margin-bottom: 0.75rem;
 }
+.mt-5{
+  margin-top: 1.25rem;
+}
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -668,9 +677,6 @@ select{
 }
 .mt-6{
   margin-top: 1.5rem;
-}
-.mt-5{
-  margin-top: 1.25rem;
 }
 .mt-8{
   margin-top: 2rem;
@@ -1096,11 +1102,11 @@ select{
 .p-6{
   padding: 1.5rem;
 }
-.p-3{
-  padding: 0.75rem;
-}
 .p-0{
   padding: 0px;
+}
+.p-3{
+  padding: 0.75rem;
 }
 .p-4{
   padding: 1rem;
@@ -1447,6 +1453,10 @@ img {
      object-fit: cover;
 }
 
+html, body, main {
+  scroll-behavior: smooth;
+}
+
 .splitImage {
   margin-bottom: 130px;
 }
@@ -1502,7 +1512,7 @@ img {
 }
 .x-images img {
   width: 40vw;
-  height: 60vh;
+  height: 80vh;
 }
 
 .time-line {
@@ -1959,6 +1969,10 @@ footer .footer-links.mid a {
 }
 
 @media (max-width: 576px) {
+  .x-images img {
+    height: 40vh;
+  }
+
   .policy-text {
     padding: 0 7.33vw;
   }
@@ -2017,6 +2031,8 @@ footer .footer-links.mid a {
     overflow: hidden;
     text-align: left;
     font-size: 70px;
+    line-height: 80px;
+    margin-bottom: 30px;
     -webkit-text-stroke: 1px #ffd981;
     color: white !important;
     text-shadow: 1px 1px 0 #ffd981, -1px -1px 0 #ffd981, 1px -1px 0 #ffd981, -1px 1px 0 #ffd981, 1px 1px 0 #ffd981;

@@ -21,6 +21,7 @@
             responsive: {
                 0: {
                     items: 1,
+                        stagePadding: 30,
                     nav: true
                 },
                 600: {

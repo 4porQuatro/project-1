@@ -14,63 +14,51 @@
             <div class="px-app mt-10">
                 <div class="container-fluid">
 
-                    <div id="carouselhome2" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            @foreach($data->articles->default->chunk(4) as $sliderChunk)
-                            <div class="carousel-item @if($loop->index == 0) active @endif">
-                                <div class="row mb-5">
-                                    @foreach($sliderChunk as $article)
-                                    <div class="col-lg-3">
-                                        <div class="card border-0 has-shadow">
-                                            <div class="card-body px-10 py-12" three-line>
-                                                <div class="card-content">
-                                                    @if(!empty($article->start_date))
-                                                    <div class="card-title h1 mb-2 yellow-text pe-10">
-                                                        {{\Carbon\Carbon::createFromFormat('Y-m-d',$article->start_date)->format('d.m.Y')}}
-                                                    </div>
-                                                    @endif
-                                                    <div class="card-subtitle h3 mb-2 pe-4">
-                                                        {{$article->title}}
-                                                    </div>
-                                                    <div>
-                                                        {{$article->subtitle}}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div id="carouselhome2" class="owl-carousel agenda" data-bs-ride="carousel">
+                        @foreach($data->articles->default as $article)
+                        <div class="card border-0 shadow">
+                            <div class="card-body px-10 py-12" three-line>
+                                <div class="card-content">
+                                    @if(!empty($article->start_date))
+                                    <div class="card-title h1 mb-2 yellow-text pe-10">
+                                        {{\Carbon\Carbon::createFromFormat('Y-m-d',$article->start_date)->format('d.m.Y')}}
                                     </div>
-                                    @endforeach
+                                    @endif
+                                    <div class="card-subtitle h3 mb-2 pe-4">
+                                        {{$article->title}}
+                                    </div>
+                                    <div>
+                                        {{$article->subtitle}}
+                                    </div>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
-
-                        <div class="d-flex align-items-center">
-                            <div class="mt-1">
-                                <button type="button" data-bs-target="#carouselhome2" data-bs-slide="prev">
-                                    <span class="material-icons-outlined">
-                                        chevron_left
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="mx-5 position-relative" style="flex: 1">
-                                <div class="progress carousel-indicators m-0 bg-transparent d-flex" style="height: 5px">
-                                    @foreach($data->articles->default->chunk(4) as $sliderChunk)
-                                    <div type="button" data-bs-target="#carouselhome2" data-bs-slide-to="{{$loop->index}}" class="border-0 mx-0 progress-bar w-100 @if($loop->index == 0) active @endif" aria-current="@if($loop->index == 0) true @endif" aria-label="Slide {{$loop->index}}"></div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="mt-1">
-                                <button type="button" data-bs-target="#carouselhome2" data-bs-slide="next">
-                                    <span class="material-icons-outlined">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-
+                <div class="d-flex mt-5 align-items-center">
+                    <div class="mt-1">
+                        <button class="owl-carousel-prev" type="button">
+                            <span class="material-icons-outlined">
+                                chevron_left
+                            </span>
+                        </button>
+                    </div>
+                    <div class="mx-5 position-relative" style="flex: 1">
+                        <div class="progress carousel-indicators m-0 bg-transparent d-flex" style="height: 5px">
+                            @foreach($data->articles->default as $sliderChunk)
+                            <div type="button" data-bs-target="#carouselhome2" data-bs-slide-to="{{$loop->index}}" class="border-0 mx-0 progress-bar w-100 @if($loop->index == 0) active @endif" aria-current="@if($loop->index == 0) true @endif" aria-label="Slide {{$loop->index}}"></div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="mt-1">
+                        <button type="button" class="owl-carousel-next">
+                            <span class="material-icons-outlined">
+                                chevron_right
+                            </span>
+                        </button>
+                    </div>
+                </div>
                 <div class="container-fluid">
                     <div class="d-flex justify-content-center py-4">
                         <!-- <btn-circle text="Ver" margin="px-5"></btn-circle> -->
@@ -114,3 +102,37 @@
         </div>
     </div>
 </div> -->
+
+<script>
+    $(document).ready(function() {
+        $(".owl-carousel.agenda").owlCarousel({
+            loop: false,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: true
+                },
+                1000: {
+                    items: 4,
+                    nav: true
+                }
+            }
+        });
+        
+$('.owl-carousel-next').click(function() {
+    $(".owl-carousel.agenda").trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.owl-carousel-prev').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    $(".owl-carousel.agenda").trigger('prev.owl.carousel');
+})
+    });
+</script>

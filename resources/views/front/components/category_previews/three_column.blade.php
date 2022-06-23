@@ -1,4 +1,4 @@
-<div class="main home-page">
+<div class="main home-page" id='colomn-component'>
 
   <section class="cards-slider">
     <div class="me-lg-5 pe-lg-5 d-flex justify-content-center">

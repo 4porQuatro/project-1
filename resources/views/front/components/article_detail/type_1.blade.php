@@ -1,6 +1,6 @@
 <div>
     <div>
-        <h1 class="page-heading text-uppercase">{{$result->title}}</h1>
+        <h1 class="page-heading text-uppercase mt-5">{{$result->title}}</h1>
 
         <div class="container">
             @if(!empty($result))
@@ -40,7 +40,8 @@
                 responsive: {
                     0: {
                         items: 1,
-                        nav: true
+                        stagePadding: 30,
+                        nav: true,
                     },
                     600: {
                         items: 2,

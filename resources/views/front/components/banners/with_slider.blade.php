@@ -11,7 +11,7 @@
         <div class="container-fluid">
           <div class="row flex-lg-row flex-column-reverse">
             <div class="col-lg py-0 text-box">
-              <a class="scrollDown-btn"> <span> {{$data->scroll_down->default}} </span></a>
+              <a class="scrollDown-btn z-50" href="#colomn-component"> <span> {{$data->scroll_down->default}} </span></a>
               <div class="wrap z-10">
                 <div>
                   <div>
@@ -49,11 +49,11 @@
       </section>
       @endforeach
     </div>
-    <button class="carousel-control-prev z-50" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <button class="p-lg-5 mx-5 position-absolute top-50 left-0 z-40 translate-middle-y" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next z-50" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <button class="p-lg-5 mx-5 position-absolute top-50 right-0 z-40 translate-middle-y" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>

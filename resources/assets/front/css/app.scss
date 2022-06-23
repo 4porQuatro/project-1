@@ -9,6 +9,11 @@ img {
     object-fit: cover;
 }
 
+
+html,body,main{
+    scroll-behavior: smooth;
+}
+
 .splitImage {
     margin-bottom: 130px;
 }
@@ -69,7 +74,7 @@ img {
     margin-bottom: 50px;
     img {
         width: 40vw;
-        height: 60vh;
+        height: 80vh;
     }
 }
 
@@ -638,6 +643,11 @@ footer {
 // r-small
 
 @media (max-width: 576px) {
+    .x-images{
+        img{
+            height: 40vh;
+        }
+    }
     .policy-text {
         padding: 0 7.33vw;
     }
@@ -695,6 +705,8 @@ footer {
         overflow: hidden;
         text-align: left;
         font-size: 70px;
+        line-height: 80px;
+        margin-bottom: 30px;
         -webkit-text-stroke: 1px #ffd981;
         color: white !important;
         text-shadow: 1px 1px 0 #ffd981, -1px -1px 0 #ffd981, 1px -1px 0 #ffd981,
