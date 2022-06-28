@@ -21164,6 +21164,28 @@ __webpack_require__.r(__webpack_exports__);
       isOpen: false
     };
   },
+  // mounted() {
+  //     window.onresize = () => {
+  //         if (typeof window !== "undefined") {
+  //             if (window.innerWidth >= 576) {
+  //                 let zoom_percent = (window.innerWidth / 1600) * 100;
+  //                 document.body.style.zoom = zoom_percent + "%";
+  //             } else if (window.innerWidth < 576) {
+  //                 let zoom_percent = (window.innerWidth / 375) * 100;
+  //                 document.body.style.zoom = zoom_percent + "%";
+  //             }
+  //         }
+  //     };
+  //     if (typeof window !== "undefined") {
+  //         if (window.innerWidth >= 576) {
+  //             let zoom_percent = (window.innerWidth / 1600) * 100;
+  //             document.body.style.zoom = zoom_percent + "%";
+  //         } else if (window.innerWidth < 576) {
+  //             let zoom_percent = (window.innerWidth / 375) * 100;
+  //             document.body.style.zoom = zoom_percent + "%";
+  //         }
+  //     }
+  // },
   setup: function setup(props) {
     var logo = (0,vue__WEBPACK_IMPORTED_MODULE_2__.computed)(function () {
       return props.component_data.image_logo["default"][0].path;

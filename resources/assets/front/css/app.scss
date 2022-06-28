@@ -189,6 +189,7 @@ html,body,main{
     text-align: center;
     font-size: 150px;
     line-height: 150px;
+    margin-bottom: 40px;
     -webkit-text-stroke: 1px #ffd981;
     color: white !important;
     text-shadow: 1px 1px 0 #ffd981, -1px -1px 0 #ffd981, 1px -1px 0 #ffd981,
@@ -543,7 +544,7 @@ body {
     section.agenda {
         background-color: #fafafa;
         margin-top: 30px;
-        .carousel-indicators {
+        .progress {
             align-items: center;
             .active {
                 background-color: $secondaryColor;

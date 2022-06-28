@@ -98,24 +98,24 @@
               <div class="row mx-0">
                 <div class="col-lg-6 p-0">
                   @if(!empty($article->images) && isset($article->images[0]))
-                  <img width="100%" src="/storage/{{$article->images[0]['path']}}" alt="{{$article->images[0]['alt_text']}}" style="width: 100%;" />
+                  <img width="100%" src="/storage/{{$article->images[0]['path']}}" alt="{{$article->images[0]['alt_text']}}" style="width: 100%;height:85vh" />
                   @endif
                 </div>
                 <div class="text-left col-lg-6 p-5">
-                  <a class="position-absolute right-0 top-0 mt-2 me-2 text-2xl" data-bs-dismiss="modal">
+                  <a class="position-absolute cursor-pointer right-0 top-0 mt-2 me-2 text-2xl" data-bs-dismiss="modal">
                     <span class="material-icons-outlined">
                       close
                     </span>
                   </a>
                   <!-- <a href="{{$article->path()}}"> -->
+                  <!-- </a> -->
+                  <p class="mb-2 h3 px-lg-5 pt-lg-5">{{$article->title}}</p>
                   @if(!empty($article->published_date))
-                  <p class="mb-2 yellow-text">
+                  <p class="mb-2 yellow-text px-lg-5">
                     {{\Carbon\Carbon::createFromFormat('Y-m-d',$article->published_date)->format('d.m.Y')}}
                   </p>
                   @endif
-                  <!-- </a> -->
-                  <p class="mb-2 h5">{{$article->title}}</p>
-                  <p class="card-text">{{$article->subtitle}}
+                  <p class="card-text px-lg-5 pb-lg-5">{{$article->subtitle}}
                   </p>
                 </div>
               </div>

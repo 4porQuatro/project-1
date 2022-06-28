@@ -16,7 +16,7 @@
 
                     <div id="carouselhome2" class="owl-carousel agenda" data-bs-ride="carousel">
                         @foreach($data->articles->default as $article)
-                        <div class="card border-0 shadow">
+                        <div class="card h-100 m-3 border-0 shadow-md" data-index='{{$loop->index+1}}' data-total='{{count($data->articles->default)}}'>
                             <div class="card-body px-10 py-12" three-line>
                                 <div class="card-content">
                                     @if(!empty($article->start_date))
@@ -45,10 +45,8 @@
                         </button>
                     </div>
                     <div class="mx-5 position-relative" style="flex: 1">
-                        <div class="progress carousel-indicators m-0 bg-transparent d-flex" style="height: 5px">
-                            @foreach($data->articles->default as $sliderChunk)
-                            <div type="button" data-bs-target="#carouselhome2" data-bs-slide-to="{{$loop->index}}" class="border-0 mx-0 progress-bar w-100 @if($loop->index == 0) active @endif" aria-current="@if($loop->index == 0) true @endif" aria-label="Slide {{$loop->index}}"></div>
-                            @endforeach
+                        <div class="progress m-0" style="height: 5px">
+                            <div type="button" class="border-0 mx-0 progress-bar active"></div>
                         </div>
                     </div>
                     <div class="mt-1">
@@ -106,7 +104,7 @@
 <script>
     $(document).ready(function() {
         $(".owl-carousel.agenda").owlCarousel({
-            loop: false,
+            loop: true,
             margin: 10,
             responsiveClass: true,
             responsive: {
@@ -124,15 +122,24 @@
                 }
             }
         });
-        
-$('.owl-carousel-next').click(function() {
-    $(".owl-carousel.agenda").trigger('next.owl.carousel');
-})
-// Go to the previous item
-$('.owl-carousel-prev').click(function() {
-    // With optional speed parameter
-    // Parameters has to be in square bracket '[]'
-    $(".owl-carousel.agenda").trigger('prev.owl.carousel');
-})
+
+        $('.owl-carousel-next').click(function() {
+            $(".owl-carousel.agenda").trigger('next.owl.carousel');
+            checkindex()
+        })
+        // Go to the previous item
+        $('.owl-carousel-prev').click(function() {
+            $(".owl-carousel.agenda").trigger('prev.owl.carousel');
+            checkindex()
+        })
+        // $('.owl-carousel-prev').on('changed.owl.carousel', function(event) {
+        // })
+        function checkindex(){
+            let indexNum = $('.owl-item.active .card').attr('data-index')
+            let total = $('.owl-item.active .card').attr('data-total')
+            let percentage = (indexNum/total)*100
+            $('.agenda .progress .progress-bar').width(percentage+'%')
+        }
+        checkindex()
     });
 </script>

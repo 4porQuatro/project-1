@@ -603,6 +603,9 @@ select{
 .m-auto{
   margin: auto;
 }
+.m-3{
+  margin: 0.75rem;
+}
 .m-0{
   margin: 0px;
 }
@@ -1066,9 +1069,6 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
-.bg-transparent{
-  background-color: transparent;
-}
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1084,6 +1084,9 @@ select{
 .bg-gray-50{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.bg-transparent{
+  background-color: transparent;
 }
 .object-cover{
   -o-object-fit: cover;
@@ -1614,6 +1617,7 @@ html, body, main {
   text-align: center;
   font-size: 150px;
   line-height: 150px;
+  margin-bottom: 40px;
   -webkit-text-stroke: 1px #ffd981;
   color: white !important;
   text-shadow: 1px 1px 0 #ffd981, -1px -1px 0 #ffd981, 1px -1px 0 #ffd981, -1px 1px 0 #ffd981, 1px 1px 0 #ffd981;
@@ -1897,14 +1901,14 @@ body p {
   background-color: #fafafa;
   margin-top: 30px;
 }
-.home-page section.agenda .carousel-indicators {
+.home-page section.agenda .progress {
   align-items: center;
 }
-.home-page section.agenda .carousel-indicators .active {
+.home-page section.agenda .progress .active {
   background-color: #000a33;
   height: 100% !important;
 }
-.home-page section.agenda .carousel-indicators div {
+.home-page section.agenda .progress div {
   background-color: grey;
   height: 70%;
 }

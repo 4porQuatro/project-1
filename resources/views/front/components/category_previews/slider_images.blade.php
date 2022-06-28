@@ -10,6 +10,9 @@
             </div>
         </div>
     </div>
+    <div class="d-flex justify-content-end px-app">
+        <a class="cursor-pointer" onclick="history.back()">Go Back</a>
+    </div>
 </div>
 <script>
     $(document).ready(function() {

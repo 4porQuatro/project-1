@@ -17,9 +17,9 @@
                                     </div>
                                     @endif
                                     <h2 class="h2">{{$result->title}}</h2>
-                                    @if(!empty($result->body))
+                                    @if(!empty($result->title))
                                     <p>
-                                        {!! $result->body !!}
+                                        {!! $result->title !!}
                                     </p>
                                     @endif
 

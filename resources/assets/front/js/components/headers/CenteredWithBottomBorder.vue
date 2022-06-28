@@ -112,7 +112,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_3.default"
+                                                            :href="
+                                                                main_data.link_3
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -123,7 +126,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_4.default"
+                                                            :href="
+                                                                main_data.link_4
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
@@ -134,7 +140,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_5.default"
+                                                            :href="
+                                                                main_data.link_5
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
@@ -145,7 +154,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_6.default"
+                                                            :href="
+                                                                main_data.link_6
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
@@ -307,7 +319,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_3.default"
+                                                            :href="
+                                                                main_data.link_3
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -318,7 +333,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_4.default"
+                                                            :href="
+                                                                main_data.link_4
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
@@ -329,7 +347,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_5.default"
+                                                            :href="
+                                                                main_data.link_5
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
@@ -340,7 +361,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_6.default"
+                                                            :href="
+                                                                main_data.link_6
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
@@ -546,7 +570,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_3.default"
+                                                            :href="
+                                                                main_data.link_3
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -557,7 +584,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_4.default"
+                                                            :href="
+                                                                main_data.link_4
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
@@ -568,7 +598,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_5.default"
+                                                            :href="
+                                                                main_data.link_5
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
@@ -579,7 +612,10 @@
                                                     <div>
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_6.default"
+                                                            :href="
+                                                                main_data.link_6
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
@@ -857,7 +893,10 @@
                                                     >
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_3.default"
+                                                            :href="
+                                                                main_data.link_3
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_3_menu
@@ -870,7 +909,10 @@
                                                     >
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_4.default"
+                                                            :href="
+                                                                main_data.link_4
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_4_menu
@@ -883,7 +925,10 @@
                                                     >
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_5.default"
+                                                            :href="
+                                                                main_data.link_5
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_5_menu
@@ -896,7 +941,10 @@
                                                     >
                                                         <a
                                                             class="text-sm font-medium tracking-wide yellow-text uppercase"
-                                                            :href="main_data.link_6.default"
+                                                            :href="
+                                                                main_data.link_6
+                                                                    .default
+                                                            "
                                                             v-text="
                                                                 main_data
                                                                     .text_6_menu
@@ -1168,6 +1216,28 @@ export default {
             isOpen: false,
         };
     },
+    // mounted() {
+    //     window.onresize = () => {
+    //         if (typeof window !== "undefined") {
+    //             if (window.innerWidth >= 576) {
+    //                 let zoom_percent = (window.innerWidth / 1600) * 100;
+    //                 document.body.style.zoom = zoom_percent + "%";
+    //             } else if (window.innerWidth < 576) {
+    //                 let zoom_percent = (window.innerWidth / 375) * 100;
+    //                 document.body.style.zoom = zoom_percent + "%";
+    //             }
+    //         }
+    //     };
+    //     if (typeof window !== "undefined") {
+    //         if (window.innerWidth >= 576) {
+    //             let zoom_percent = (window.innerWidth / 1600) * 100;
+    //             document.body.style.zoom = zoom_percent + "%";
+    //         } else if (window.innerWidth < 576) {
+    //             let zoom_percent = (window.innerWidth / 375) * 100;
+    //             document.body.style.zoom = zoom_percent + "%";
+    //         }
+    //     }
+    // },
     setup(props) {
         const logo = computed(() => {
             return props.component_data.image_logo.default[0].path;

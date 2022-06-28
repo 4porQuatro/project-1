@@ -1,7 +1,6 @@
 <div>
     <div>
         <h1 class="page-heading text-uppercase mt-5">{{$result->title}}</h1>
-
         <div class="container">
             @if(!empty($result))
             <div class="h4">
@@ -29,6 +28,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="d-flex justify-content-end px-app">
+        <a class="cursor-pointer" onclick="history.back()">Go Back</a>
     </div>
     <script>
         $(document).ready(function() {
