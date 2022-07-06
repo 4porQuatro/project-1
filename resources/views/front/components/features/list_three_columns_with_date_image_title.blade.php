@@ -41,10 +41,10 @@
             <div class="modal-body p-0">
               <div class="row mx-0">
                 <div class="col-lg-6 p-0">
-                  @if(!empty($article->images) && isset($article->images[0]))
+                  @if(!empty($article->images_detail) && isset($article->images_detail[0]))
                   <div id="model-carouselControls-{{$loop->index}}" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                      @foreach($article->images as $image)
+                      @foreach($article->images_detail as $image)
                       <div class="carousel-item @if($loop->index == 0) active @endif">
                         <img width="100%" src="/storage/{{$image['path']}}" alt="{{$image['alt_text']}}" style="width: 100%;height:85vh" />
                       </div>
@@ -75,6 +75,8 @@
                   @endif
                   <p class="card-text px-lg-5 pb-lg-5">{{$article->subtitle}}
                   </p>
+
+                    <p>{!! $article->body !!}</p>
                 </div>
               </div>
             </div>
