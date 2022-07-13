@@ -11,7 +11,7 @@
     </div>
 </div>
 
-
+@push('scripts')
 <script>
     $(document).ready(function() {
         $(".owl-carousel.auditorio").owlCarousel({
@@ -38,3 +38,4 @@
         });
     });
 </script>
+    @endpush

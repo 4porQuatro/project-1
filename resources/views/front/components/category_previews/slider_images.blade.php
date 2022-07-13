@@ -14,6 +14,7 @@
         <a class="cursor-pointer" onclick="history.back()">Go Back</a>
     </div>
 </div>
+@push('scripts')
 <script>
     $(document).ready(function() {
         $(".owl-carousel.x-images").owlCarousel({
@@ -39,4 +40,5 @@
         });
     });
 </script>
+@endpush
 @endif

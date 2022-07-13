@@ -32,30 +32,32 @@
     <div class="d-flex justify-content-end px-app">
         <a class="cursor-pointer" onclick="history.back()">Go Back</a>
     </div>
-    <script>
-        $(document).ready(function() {
-            $(".owl-carousel.x-images").owlCarousel({
-                stagePadding: 80,
-                loop: false,
-                margin: 10,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        stagePadding: 30,
-                        nav: true,
-                    },
-                    600: {
-                        items: 2,
-                        nav: true
-                    },
-                    1000: {
-                        items: 2,
-                        nav: true
-                    }
-                }
-            });
-        });
-    </script>
+        @push('scripts')
+            <script>
+                $(document).ready(function() {
+                    $(".owl-carousel.x-images").owlCarousel({
+                        stagePadding: 80,
+                        loop: false,
+                        margin: 10,
+                        responsiveClass: true,
+                        responsive: {
+                            0: {
+                                items: 1,
+                                stagePadding: 30,
+                                nav: true,
+                            },
+                            600: {
+                                items: 2,
+                                nav: true
+                            },
+                            1000: {
+                                items: 2,
+                                nav: true
+                            }
+                        }
+                    });
+                });
+            </script>
+        @endpush
     @endif
 </div>

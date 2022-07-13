@@ -57,7 +57,7 @@
                 <li class="border-bottom py-2 text-capitalize" v-for="(item,index) in this.list" :key="index">
                     <a
                         v-if="asDocs(item)"
-                        :href="item.docs[0]['path']"
+                        :href="'/storage/'+item.docs[0]['path']"
                         target="_blank"
                         class="d-flex align-items-center justify-content-between"
                     >

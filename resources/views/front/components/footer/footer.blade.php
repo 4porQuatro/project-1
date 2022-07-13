@@ -75,7 +75,7 @@
                 </a>
                 @endforeach
             </div>
-            
+
             <div class="col-lg-2 footer-links">
                 <a class="heading">
                     <h4 class="mb-5">{{$data->title_four_menu->default}}</h4>
@@ -86,7 +86,7 @@
                 </a>
                 @endforeach
             </div>
-            
+
             <div class="col-lg-2 footer-links">
                 <a class="heading">
                     <h4 class="mb-5">{{$data->title_five_bar->default}}</h4>
@@ -104,4 +104,6 @@
         </div>
     </div>
 </footer>
+@push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+@endpush

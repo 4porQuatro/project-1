@@ -100,8 +100,8 @@
         </div>
     </div>
 </div> -->
-
-<script>
+@push('scripts')
+    <script>
     $(document).ready(function() {
         $(".owl-carousel.agenda").owlCarousel({
             loop: true,
@@ -143,3 +143,4 @@
         checkindex()
     });
 </script>
+@endpush
